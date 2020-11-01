@@ -41,7 +41,7 @@ public class TestClonerThreadSafety extends TestCase
 			{
 				Thread.yield();
 			}
-			final List<Calendar> l = new ArrayList<Calendar>();
+			final List<Calendar> l = new ArrayList<>();
 			l.add(cal);
 			l.add(Calendar.getInstance());
 			final List<Calendar> lClone = cloner.deepClone(l);
@@ -61,7 +61,7 @@ public class TestClonerThreadSafety extends TestCase
 			{
 				throw new RuntimeException(e);
 			}
-			final TreeMap<String, Object> m = new TreeMap<String, Object>();
+			final TreeMap<String, Object> m = new TreeMap<>();
 			m.put("cal", cal);
 			m.put("clone", clone);
 			final TreeMap<String, Object> dm = cloner.deepClone(m);
